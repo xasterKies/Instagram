@@ -25,7 +25,7 @@
     "build:css": "postcss src/styles/tailwind.css -o src/styles/app.css",
     "watch:css": "postcss src/styles/tailwind.css -o src/styles/app.css --watch",
     "react-scripts:start": "sleep 5 && react-scripts start",
-    "start": "craco start",
+    "start": "run-p watch:css react-scripts:start",
     "build": "run-s build:css craco build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
